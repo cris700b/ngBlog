@@ -28,8 +28,6 @@
 		
 		$scope.singlePost = $scope.getPostById($stateParams.id);	
 		
-		console.log($scope.singlePost);
-		
 	});
 })
 (angular.module('posts.controllers', [

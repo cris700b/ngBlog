@@ -1,19 +1,19 @@
 
 <div class="row">
 
-    <div class="col-md-3">
+    <div class="col-xs-3">
 	
 	    <ul class="nav nav-pills nav-stacked on-click-make-active">
 	     
 		    <!-- Loads the admin.postList state, doesn't contain anything now-->
-		    <li>
+		    <li ui-sref-active="active">
 				<a ui-sref="admin.postList">
 					View All Posts
 				</a>
 			</li>
 			
 			<!-- Loads the admin.postNew state-->
-			<li class="active">
+			<li ui-sref-active="active">
 				<a ui-sref="admin.postNew">
 					Add Post
 				</a>
@@ -21,7 +21,7 @@
 	    </ul>
 	</div>
 	
-	<div class="col-md-9 border-left">
+	<div class="col-xs-9 border-left">
 	
 		<!-- the nested views are loaded here -->
 		<div ui-view></div>
