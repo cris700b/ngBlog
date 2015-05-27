@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Cristian Birzu",
-  "license": "MIT",
+  "license": "GNU",
   "dependencies": {
     "bower": "^1.4.1",
     "gulp": "^3.8.11",
