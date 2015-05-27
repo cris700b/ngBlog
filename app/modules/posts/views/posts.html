@@ -1,0 +1,28 @@
+
+<div class="row">
+
+    <div class="col-md-3" ng-repeat="post in posts">
+
+		<h2>
+			<a ui-sref="singlePost({id: post.id, permalink: post.permalink})">
+				{{post.title}}
+			</a>
+		</h2>
+		
+		<h5>
+			<i>
+				By: {{post.author}} | {{post.publishDate | date: 'dd/MM/yyyy'}}
+			 </i>
+		</h5>
+        <!--p>{{post.content}}</p-->
+		
+		<br />
+		
+        <div>
+			<a class="btn btn-default" role="button" 
+				ui-sref="singlePost({id: post.id, permalink: post.permalink})">
+				View details &raquo;
+			</a>
+		</div>
+    </div>
+</div>
