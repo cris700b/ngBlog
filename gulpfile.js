@@ -26,7 +26,7 @@ var devDir = 'app/',
 	mainCssFile = devDir + 'css/main.css', 
 	
 	cssFiles = devDir + '**/css/**/*.css',
-	jsFiles = devDir + '**/js/**/*_+(srv|ctrl)+(.js)', 
+	jsFiles = devDir + '**/js/**/*_+(srv|ctrl|drv)+(.js)', 
 	htmlFiles = devDir + '**/*.html',
 	imgFiles = devDir + '**/img/**/*.+(jpg|png)', 
 	

@@ -26,7 +26,7 @@
 (angular.module('ngBlog', [
 
 	'ui.router',  
-	'posts', 
+	'post', 
 	'admin'
 ]));
 

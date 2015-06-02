@@ -9,8 +9,8 @@
 		$stateProvider.state('allPosts', {
 			
 			url: '/posts', 
-			templateUrl: 'modules/posts/views/posts.html', 
-			controller: 'PostsCtrl', 
+			templateUrl: 'modules/post/views/posts.html', 
+			controller: 'PostCtrl', 
 			data: {
 				
 				title: 'Posts Page'
@@ -20,7 +20,7 @@
 		.state('singlePost', {
 			
 			url: '/posts/:id/:permalink', 
-			templateUrl: 'modules/posts/views/singlePost.html', 
+			templateUrl: 'modules/post/views/singlePost.html', 
 			controller: 'PostDetailsCtrl', 
 			data: {
 				
@@ -31,9 +31,10 @@
 	});
 	
 })	
-(angular.module('posts', [
+(angular.module('post', [
 
 	'ui.router', 
-	'posts.controllers', 
-	'posts.services'
+	'post.controllers', 
+	'post.services', 
+	'post.directives'
 ]));

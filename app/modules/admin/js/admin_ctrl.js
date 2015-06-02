@@ -10,7 +10,7 @@
 		
 		.controller('PostListCtrl', function($scope, $state, PostSrv, PopupSrv){
 			
-			$scope.posts = PopupSrv.query();
+			$scope.posts = PostSrv.query();
 			
 			$scope.deletePost = function(post){
 				
@@ -21,7 +21,7 @@
 						// once deleted, reload the state
 						$state.go('admin.postList', undefined, {
 							
-							reload: true;
+							reload: true
 						});
 					});
 				}
@@ -40,7 +40,7 @@
 			
 			$scope.post.permalink = angular.lowercase($scope.post.title).replace(/[\s]/g, '-');
 			
-			$scope,post.$save(function(){
+			$scope.post.$save(function(){
 				
 				$state.go('admin.postList');
 			});			

@@ -1,3 +1,4 @@
+
 // Karma configuration
 // Generated on Tue May 19 2015 00:12:07 GMT+0200 (W. Europe Daylight Time)
 
@@ -18,7 +19,7 @@ module.exports = function(config) {
 		'karma-ng-html2js-preprocessor', 
 		//'karma-junit-reporter',
 		//'karma-jshint-preprocessor', 
-		//'karma-chrome-launcher',
+		'karma-chrome-launcher',
 		//'karma-firefox-launcher',
 		'karma-jasmine',
 		'karma-phantomjs-launcher'
@@ -27,13 +28,14 @@ module.exports = function(config) {
 	// add the plugin settings
 	ngHtml2JsPreprocessor: {
 	  
-	  stripPrefix: 'app/'
+	  stripPrefix: 'app/', 
+	  moduleName:'templates' //load this module in your tests
 	}, 
 
     // list of files / patterns to load in the browser
     files: [
 		'./app/bower_components/jquery/dist/jquery.min.js',		
-		'./app/bower_components/angular/angular.min.js', 'bower_components/angular-resource/angular-resource.min.js', 
+		'./app/bower_components/angular/angular.min.js', './app/bower_components/angular-resource/angular-resource.min.js', 
 		'./app/bower_components/angular-mocks/angular-mocks.js',
 		'./app/bower_components/angular-ui-router/release/angular-ui-router.min.js',
 		//'./app/bower_components/angular-animate/angular-animate.min.js', 
@@ -41,9 +43,10 @@ module.exports = function(config) {
 		//'./app/app.min.js', 
 		'./app/**/js/*_srv.js',
 		'./app/**/js/*_ctrl.js',
+		'./app/**/js/*_drv.js', 
 		'./app/**/test/unit/*_test.js',
 		//'./app/**/js/**/*_e2e.js',		
-		'./app/**/*.html'
+		'./app/**/views/*.html'
     ],
 	
     // list of files to exclude
@@ -55,7 +58,7 @@ module.exports = function(config) {
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
 		
-		//'./../app/**/views/**/*.html': 'html2js',
+		'./app/**/views/*.html': 'ng-html2js',
 		//'./../app/app.min.js': ['coverage'],
 		//'./../app/js/*.js': ['jshint', 'coverage'], 
 		//'./../app/modules/**/js/*.js': ['jshint', 'coverage'] 
@@ -84,7 +87,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['dots'], //, 'coverage'],
+    reporters: ['progress'], //, 'coverage'],
 
 
     // web server port
@@ -111,7 +114,7 @@ module.exports = function(config) {
 					//'Chrome', 
 					'PhantomJS'],
 	
-	captureTimeout: 30000, 
+	captureTimeout: 60000, 
 	
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits

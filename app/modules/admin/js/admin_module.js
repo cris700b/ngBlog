@@ -52,5 +52,6 @@
 	
 	'ui.router',
 	'admin.controllers', 
-	'admin.services'
+	'admin.services',
+	'post.services'
 ]));
