@@ -41,7 +41,7 @@
             <div class="form-group">
               <input type="password" placeholder="Password" class="form-control">
             </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
+            <button type="submit" class="btn btn-success">{{'SIGNIN' | translate}}</button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
@@ -49,6 +49,21 @@
 
 	<!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
+		
+		<!-- language switch -->
+		<div class="btn-group btn-toggle">
+			
+			<button class="btn btn-xs-btn-default" ng-class="{en: 'active'}[languagePreference.currentLanguage]"
+			ng-click="languagePreference.switchLanguage('en')">
+				English
+			</button>
+			
+			<button class="btn btn-xs-btn-primary" ng-class="{it: 'active'}[languagePreference.currentLanguage]"
+			ng-click="languagePreference.switchLanguage('it')">
+				Italiano
+			</button>
+			
+		</div>
       <div class="container">
         <h1>Hello, world!</h1>
         <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
@@ -58,7 +73,7 @@
 	
 	<div class="container">
 		
-		<h1>The Single Page Blogger</h1>
+		<h1>{{'TITLE' | translate}}</h1>
 		  
 		  <!-- views -->
 		 <div ui-view></div>
@@ -78,6 +93,7 @@
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 	<script src="bower_components/angular-resource/angular-resource.min.js"></script>
+	<script src="bower_components/angular-translate/angular-translate.min.js"></script>
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="app.min.js"></script>
