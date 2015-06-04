@@ -44,6 +44,7 @@ module.exports = function(config) {
 		'./app/**/js/*_srv.js',
 		'./app/**/js/*_ctrl.js',
 		'./app/**/js/*_drv.js', 
+		'./app/**/js/*_filter.js', 
 		'./app/**/test/unit/*_test.js',
 		//'./app/**/js/**/*_e2e.js',		
 		'./app/**/views/*.html'

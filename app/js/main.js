@@ -25,7 +25,8 @@
 })	
 (angular.module('ngBlog', [
 
-	'ui.router',  
+	'ui.router',
+	'ngAnimate', 
 	'post', 
 	'admin'
 ]));

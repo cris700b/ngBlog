@@ -53,5 +53,6 @@
 	'ui.router',
 	'admin.controllers', 
 	'admin.services',
-	'post.services'
+	'admin.filters', 
+	'post.services' 
 ]));
