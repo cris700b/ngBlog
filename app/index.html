@@ -2,7 +2,7 @@
 <!doctype html>
 <html ng-app="ngBlog">
 <head lang="en">
-	
+
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,13 +12,13 @@
     <!--link rel="icon" href="../../favicon.ico"-->
 
     <title ng-bind="title"></title>
-    
+
 	<!-- styles -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="bower_components/animate.css/animate.min.css"/>
     <link rel="stylesheet" href="app.min.css"/>
-	
+
 </head>
 <body>
 
@@ -49,20 +49,20 @@
 
 	<!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
-		
+
 		<!-- language switch -->
 		<div class="btn-group btn-toggle">
-			
+
 			<button class="btn btn-xs-btn-default" ng-class="{en: 'active'}[languagePreference.currentLanguage]"
 			ng-click="languagePreference.switchLanguage('en')">
 				English
 			</button>
-			
+
 			<button class="btn btn-xs-btn-primary" ng-class="{it: 'active'}[languagePreference.currentLanguage]"
 			ng-click="languagePreference.switchLanguage('it')">
 				Italiano
 			</button>
-			
+
 		</div>
       <div class="container">
         <h1>Hello, world!</h1>
@@ -70,14 +70,14 @@
         <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
       </div>
     </div>
-	
+
 	<div class="container">
-		
+
 		<h1>{{'TITLE' | translate}}</h1>
-		  
+
 		  <!-- views -->
 		 <div ui-view></div>
-		  
+
 		<hr />
 		<div class="row footer">
 			<footer class="col-xs-12 text-center">
@@ -90,13 +90,14 @@
 
 	<!-- scripts -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components\angular-translate\angular-translate.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 	<script src="bower_components/angular-resource/angular-resource.min.js"></script>
-	<script src="bower_components/angular-translate/angular-translate.min.js"></script>
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="app.min.js"></script>
-	
+
 </body>
 </html>
